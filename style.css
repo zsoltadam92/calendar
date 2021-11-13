@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg")
+    no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 560px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#year {
+  margin: 1rem;
+}
+#month {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1rem;
+  font-family: sans-serif;
+}
+
+.days-name,
+.first-week,
+.second-week,
+.third-week,
+.fourth-week,
+.fifth-week {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.day-name {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.square {
+  width: 2rem;
+  margin: 1rem;
+}
+
+.number {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.number:hover {
+  background-color: rgba(16, 96, 153, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+
+/* buttons */
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+}
+
+.prev-btn,
+.next-btn {
+  color: hsl(205, 70%, 25%);
+  font-size: 2.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: hsl(205, 78%, 60%);
+}
+
+/* modal  */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.modal-container {
+  background: white;
+  border-radius: 0.5rem;
+  width: 90vw;
+  height: 30vh;
+  max-width: 1170px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: hsl(360, 67%, 44%);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.close-btn:hover {
+  color: hsl(360, 71%, 66%);
+  transform: scale(1.3);
+}
+
+.modal-text {
+  font-size: 3rem;
+  font-family: monospace;
+}
+
+.special-number {
+  color: hsl(360, 67%, 44%);
+}
